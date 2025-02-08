@@ -7,6 +7,7 @@ import { useRecoilValue } from "recoil";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Head from "next/head";
 type AuthPageProps = {};
 
 const AuthPage: React.FC<AuthPageProps> = () => {
@@ -23,6 +24,10 @@ const AuthPage: React.FC<AuthPageProps> = () => {
 	if (pageLoading) return null;
 
 	return (
+		<>
+		<Head>
+			<title>Sign in - Algo Arena</title>
+		</Head>
 		<div className='bg-gradient-to-b from-gray-600 to-black h-screen relative'>
 			<div className='max-w-7xl mx-auto'>
 				<Navbar />
@@ -32,6 +37,7 @@ const AuthPage: React.FC<AuthPageProps> = () => {
 				{authModal.isOpen && <AuthModal />}
 			</div>
 		</div>
+		</>
 	);
 };
 export default AuthPage;
