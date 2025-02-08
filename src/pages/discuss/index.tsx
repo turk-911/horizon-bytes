@@ -66,12 +66,12 @@ const DiscussPage = () => {
     <Head>
       <title>Discuss - Algo Arena</title>
     </Head>
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-dark-layer-2">
       <Topbar />
       <div className="max-w-6xl mx-auto mt-6">
         {/* Header */}
         <div className="mb-6">
-          <h1 className="text-3xl font-bold text-slate-800 mb-4">Discuss</h1>
+          <h1 className="text-3xl font-bold text-accent-foreground mb-4">Discuss</h1>
           
           {/* Search and Filter Bar */}
           <div className="flex gap-4 mb-6">
@@ -95,7 +95,7 @@ const DiscussPage = () => {
               <Badge 
                 key={index} 
                 variant="outline" 
-                className="px-3 py-1 cursor-pointer hover:bg-slate-100"
+                className="px-3 py-1 cursor-pointer hover:text-brand-orange text-brand-orange-s"
               >
                 {category.name} ({category.count})
               </Badge>
@@ -106,7 +106,7 @@ const DiscussPage = () => {
         {/* Main Content */}
         <div className="grid grid-cols-1 gap-4">
           {topics.map((topic, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+            <Card key={index} className="hover:shadow-lg transition-shadow bg-dark-layer-1">
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
@@ -124,14 +124,14 @@ const DiscussPage = () => {
                         </Badge>
                       )}
                     </div>
-                    <CardTitle className="text-lg text-blue-600 hover:text-blue-700 cursor-pointer">
+                    <CardTitle className="text-lg text-accent-foreground cursor-pointer">
                       {topic.title}
                       {topic.solved && (
                         <CheckCircle2 className="inline-block w-4 h-4 ml-2 text-green-500" />
                       )}
                     </CardTitle>
-                    <div className="flex items-center gap-2 mt-2 text-sm text-slate-600">
-                      <span className="font-medium text-slate-700">@{topic.author}</span>
+                    <div className="flex items-center gap-2 mt-2 text-sm text-muted-foreground">
+                      <span className="font-medium text-muted-foreground">@{topic.author}</span>
                       <span>•</span>
                       <span className="flex items-center gap-1">
                         <Clock className="w-4 h-4" />

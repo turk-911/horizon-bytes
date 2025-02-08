@@ -68,11 +68,11 @@ const ContestPage = () => {
       <Head>
         <title>Contests - Algo Arena</title>
       </Head>
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-dark-layer-2">
         <Topbar />
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-between items-center mb-6 mt-6">
-            <h1 className="text-3xl font-bold text-slate-800">Contests</h1>
+            <h1 className="text-3xl font-bold text-accent-foreground">Contests</h1>
             <div className="flex gap-4">
               <Badge variant="outline" className="text-sm">
                 Global Rating
@@ -85,17 +85,17 @@ const ContestPage = () => {
 
           {/* Ongoing Contests */}
           <div className="mb-8">
-            <h2 className="text-xl font-semibold text-slate-700 mb-4 flex items-center gap-2">
+            <h2 className="text-xl font-semibold text-accent-foreground mb-4 flex items-center gap-2">
               <Timer className="w-5 h-5 text-green-500" />
               Live Now
             </h2>
             <div className="grid grid-cols-1 gap-4">
               {ongoingContests.map((contest, index) => (
-                <Card key={index} className="border-l-4 border-l-green-500">
+                <Card key={index} className="border-l-4 border-l-green-500 bg-foreground ">
                   <CardHeader>
                     <div className="flex items-center justify-between">
                       <div>
-                        <CardTitle className="text-lg text-green-600">
+                        <CardTitle className="text-lg text-background">
                           {contest.title}
                         </CardTitle>
                         <CardDescription className="flex items-center gap-2">
@@ -122,13 +122,13 @@ const ContestPage = () => {
 
           {/* Upcoming Contests */}
           <div className="mb-8">
-            <h2 className="text-xl font-semibold text-slate-700 mb-4 flex items-center gap-2">
+            <h2 className="text-xl font-semibold text-accent-foreground mb-4 flex items-center gap-2">
               <Calendar className="w-5 h-5 text-blue-500" />
               Upcoming Contests
             </h2>
             <div className="grid grid-cols-1 gap-4">
               {upcomingContests.map((contest, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+                <Card key={index} className="hover:shadow-lg transition-shadow bg-dark-layer-1">
                   <CardHeader>
                     <div className="flex items-center justify-between">
                       <div>
@@ -142,7 +142,7 @@ const ContestPage = () => {
                       </div>
                       <Badge
                         variant="outline"
-                        className="text-blue-500 border-blue-500"
+                        className=" bg-brand-orange-s"
                       >
                         {contest.status}
                       </Badge>
@@ -171,12 +171,12 @@ const ContestPage = () => {
 
           {/* Past Contests */}
           <div>
-            <h2 className="text-xl font-semibold text-slate-700 mb-4">
+            <h2 className="text-xl font-semibold text-accent-foreground mb-4">
               Past Contests
             </h2>
             <div className="grid grid-cols-1 gap-4">
               {pastContests.map((contest, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+                <Card key={index} className="hover:shadow-lg transition-shadow bg-dark-layer-1">
                   <CardHeader>
                     <div className="flex items-center justify-between">
                       <div>

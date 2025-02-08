@@ -40,34 +40,34 @@ const BuyMeACoffee = () => {
       <Head>
         <title>Buy me a coffee</title>
       </Head>
-      <div className="min-h-screen bg-slate-50 p-3">
+      <div className="min-h-screen bg-dark-layer-2 p-6">
         <div className="max-w-2xl mx-auto">
           {/* Profile Section */}
           <div className="text-center mb-8">
-            <div className="w-24 h-24 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <div className="w-24 h-24 bg-brand-orange-s rounded-full mx-auto mb-4 flex items-center justify-center">
               <span className="text-2xl text-white font-bold">MJ</span>
             </div>
-            <h1 className="text-3xl font-bold text-slate-800 mb-2">
+            <h1 className="text-3xl font-bold text-accent-foreground mb-2">
               Mokshe Jain
             </h1>
             <p className="text-slate-600 mb-4">
               Building helpful tools and creating content about web development
             </p>
             <div className="flex justify-center gap-4">
-              <a href="#" className="text-slate-600 hover:text-slate-900">
+              <a href="https://github.com/turk-911" className="text-accent-foreground hover:text-brand-orange-s">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="text-slate-600 hover:text-slate-900">
+              <a href="https://x.com/mig200525" className="text-accent-foreground hover:text-brand-orange-s">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-slate-600 hover:text-slate-900">
+              <a href="https://turk-911.github.io/Mokshe/" className="text-accent-foreground hover:text-brand-orange-s">
                 <LinkIcon className="w-5 h-5" />
               </a>
             </div>
           </div>
 
           {/* Support Card */}
-          <Card className="mb-8">
+          <Card className="mb-8 bg-dark-layer-1">
             <CardHeader>
               <CardTitle className="text-xl flex items-center gap-2">
                 <Coffee className="w-5 h-5 text-yellow-600" />
@@ -85,9 +85,9 @@ const BuyMeACoffee = () => {
                     <button
                       key={amount}
                       onClick={() => setSelectedAmount(amount)}
-                      className={`py-3 rounded-lg ${
+                      className={`py-3 rounded-lg text-background ${
                         selectedAmount === amount
-                          ? "bg-blue-500 text-white"
+                          ? "bg-brand-orange"
                           : "bg-slate-100 hover:bg-slate-200"
                       }`}
                     >
@@ -106,18 +106,18 @@ const BuyMeACoffee = () => {
                     placeholder="Custom amount"
                     value={customAmount}
                     onChange={(e) => setCustomAmount(e.target.value)}
-                    className="w-full p-2 pl-8 border rounded-lg"
+                    className="w-full p-2 pl-8 border rounded-lg text-background"
                   />
                 </div>
 
                 {/* Message */}
                 <textarea
                   placeholder="Leave a message (optional)"
-                  className="w-full p-2 border rounded-lg h-24 resize-none"
+                  className="w-full p-2 border rounded-lg h-24 resize-none text-background"
                 />
 
                 {/* Support Button */}
-                <button className="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 flex items-center justify-center gap-2">
+                <button className="w-full py-3 bg-brand-orange text-background rounded-lg hover:bg-brand-orange-s flex items-center justify-center gap-2">
                   <Heart className="w-4 h-4" />
                   Support ${selectedAmount}
                 </button>
@@ -127,17 +127,17 @@ const BuyMeACoffee = () => {
 
           {/* Recent Supporters */}
           <div className="mb-8">
-            <h2 className="text-xl font-semibold text-slate-700 mb-4 flex items-center gap-2">
-              <Users className="w-5 h-5 text-blue-500" />
+            <h2 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
+              <Users className="w-5 h-5 text-brand-orange" />
               Recent Supporters
-            </h2>
+            </h2>   
             <div className="space-y-4">
               {recentSupporters.map((supporter, index) => (
-                <Card key={index}>
+                <Card key={index} className="bg-dark-layer-1">
                   <CardContent className="pt-4">
                     <div className="flex justify-between items-start mb-2">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center">
+                        <div className="w-8 h-8 bg-brand-orange-s rounded-full flex items-center justify-center">
                           {supporter.name[0]}
                         </div>
                         <div>
@@ -147,12 +147,12 @@ const BuyMeACoffee = () => {
                           </div>
                         </div>
                       </div>
-                      <Badge variant="secondary">
+                      <Badge variant="secondary" className="bg-brand-orange-s">
                         <Coffee className="w-3 h-3 mr-1" />
                         Supporter
                       </Badge>
                     </div>
-                    <p className="text-slate-600 text-sm">
+                    <p className="text-slate-400 text-sm">
                       {supporter.message}
                     </p>
                   </CardContent>
@@ -162,10 +162,10 @@ const BuyMeACoffee = () => {
           </div>
 
           {/* Goals Section */}
-          <Card>
+          <Card className="bg-dark-layer-1">
             <CardHeader>
               <CardTitle className="text-xl flex items-center gap-2">
-                <Star className="w-5 h-5 text-yellow-500" />
+                <Star className="w-5 h-5 text-brand-orange" />
                 Monthly Goals
               </CardTitle>
             </CardHeader>

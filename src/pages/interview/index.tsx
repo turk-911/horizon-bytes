@@ -85,25 +85,25 @@ const InterviewPage = () => {
       <Head>
         <title>Interview - Algo Arena</title>
       </Head>
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-dark-layer-2">
         <Topbar />
         <div className="max-w-6xl mx-auto mt-6">
-          <h1 className="text-3xl font-bold text-slate-800 mb-6">
+          <h1 className="text-3xl font-bold text-accent-foreground mb-6">
             Interview Preparation
           </h1>
 
           {/* Company-specific Section */}
           <div className="mb-8">
-            <h2 className="text-xl font-semibold text-slate-700 mb-4 flex items-center gap-2">
+            <h2 className="text-xl font-semibold text-accent-foreground mb-4 flex items-center gap-2">
               <Building2 className="w-5 h-5 text-blue-500" />
               Company-specific Questions
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {companies.map((company, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+                <Card key={index} className="hover:shadow-lg transition-shadow bg-dark-layer-1">
                   <CardHeader>
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center font-bold text-xl">
+                      <div className="w-12 h-12 bg-brand-orange-s rounded-lg flex items-center justify-center font-bold text-xl">
                         {company.logo}
                       </div>
                       <div>
@@ -129,7 +129,7 @@ const InterviewPage = () => {
                       >
                         {company.difficulty}
                       </Badge>
-                      <span>Acceptance: {company.acceptance}</span>
+                      <span className="text-muted-foreground">Acceptance: {company.acceptance}</span>
                     </div>
                   </CardContent>
                 </Card>
@@ -139,13 +139,13 @@ const InterviewPage = () => {
 
           {/* Assessments Section */}
           <div className="mb-8">
-            <h2 className="text-xl font-semibold text-slate-700 mb-4 flex items-center gap-2">
+            <h2 className="text-xl font-semibold text-accent-foreground mb-4 flex items-center gap-2">
               <Target className="w-5 h-5 text-green-500" />
               Assessment Tests
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {assessments.map((assessment, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+                <Card key={index} className="hover:shadow-lg transition-shadow bg-dark-layer-1">
                   <CardHeader>
                     <CardTitle className="text-lg">
                       {assessment.title}
@@ -158,12 +158,12 @@ const InterviewPage = () => {
                   <CardContent>
                     <div className="flex flex-col gap-2">
                       <div className="flex justify-between text-sm text-slate-600">
-                        <span>{assessment.questions} questions</span>
-                        <span>{assessment.completions} completions</span>
+                        <span className="text-muted-foreground">{assessment.questions} questions</span>
+                        <span className="text-muted-foreground">{assessment.completions} completions</span>
                       </div>
                       <div className="flex gap-2">
                         {assessment.topics.map((topic, topicIndex) => (
-                          <Badge key={topicIndex} variant="outline">
+                          <Badge key={topicIndex} variant="outline" className="bg-brand-orange-s">
                             {topic}
                           </Badge>
                         ))}
@@ -176,14 +176,14 @@ const InterviewPage = () => {
           </div>
 
           {/* Mock Interviews Section */}
-          <div>
-            <h2 className="text-xl font-semibold text-slate-700 mb-4 flex items-center gap-2">
+          <div className="mb-10">
+            <h2 className="text-xl font-semibold text-accent-foreground mb-4 flex items-center gap-2">
               <Briefcase className="w-5 h-5 text-purple-500" />
               Mock Interviews
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {mockInterviews.map((interview, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+                <Card key={index} className="hover:shadow-lg transition-shadow bg-dark-layer-1">
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>
@@ -195,7 +195,7 @@ const InterviewPage = () => {
                           {interview.duration}
                         </CardDescription>
                       </div>
-                      <Badge variant="outline" className="bg-green-50">
+                      <Badge variant="outline" className="bg-brand-orange-s">
                         {interview.slots} slots available
                       </Badge>
                     </div>
@@ -215,7 +215,7 @@ const InterviewPage = () => {
                       </Badge>
                       <div className="flex gap-2">
                         {interview.topics.map((topic, topicIndex) => (
-                          <Badge key={topicIndex} variant="outline">
+                          <Badge key={topicIndex} variant="outline" className="bg-brand-orange-s">
                             {topic}
                           </Badge>
                         ))}

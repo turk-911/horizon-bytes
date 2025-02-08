@@ -81,15 +81,15 @@ const StorePage = () => {
       <Head>
         <title>Store - Algo Arena</title>
       </Head>
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-dark-layer-2">
         <Topbar />
         <div className="max-w-6xl mx-auto mt-6 p-2">
-          <h1 className="text-3xl font-bold text-slate-800 mb-6">Store</h1>
+          <h1 className="text-3xl font-bold text-accent-foreground mb-6">Store</h1>
 
           {/* Premium Plans */}
           <div className="mb-8">
-            <h2 className="text-xl font-semibold text-slate-700 mb-4 flex items-center gap-2">
-              <Crown className="w-5 h-5 text-yellow-500" />
+            <h2 className="text-xl font-semibold text-accent-foreground mb-4 flex items-center gap-2">
+              <Crown className="w-5 h-5 text-brand-orange" />
               Premium Plans
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -97,11 +97,11 @@ const StorePage = () => {
                 <Card
                   key={index}
                   className={`hover:shadow-lg transition-shadow ${
-                    plan.popular ? "border-2 border-blue-500" : ""
+                    plan.popular ? "border-2 border-brand-orange-s" : ""
                   }`}
                 >
                   {plan.popular && (
-                    <div className="bg-blue-500 text-white text-sm py-1 px-4 text-center">
+                    <div className="bg-brand-orange text-white text-sm py-1 px-4 text-center">
                       Most Popular
                     </div>
                   )}
@@ -137,8 +137,8 @@ const StorePage = () => {
                       <button
                         className={`mt-4 py-2 px-4 rounded-lg w-full ${
                           plan.popular
-                            ? "bg-blue-500 text-white hover:bg-blue-600"
-                            : "border border-blue-500 text-blue-500 hover:bg-blue-50"
+                            ? "bg-brand-orange text-background hover:bg-brand-orange-s"
+                            : "border border-brand-orange text-brand-orange hover:bg-blue-50"
                         }`}
                       >
                         Subscribe Now
@@ -152,7 +152,7 @@ const StorePage = () => {
 
           {/* Other Products */}
           <div>
-            <h2 className="text-xl font-semibold text-slate-700 mb-4 flex items-center gap-2">
+            <h2 className="text-xl font-semibold text-accent-foreground mb-4 flex items-center gap-2">
               <Gift className="w-5 h-5 text-purple-500" />
               Featured Products
             </h2>
@@ -175,7 +175,7 @@ const StorePage = () => {
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-col gap-4">
-                      <div className="text-2xl font-bold text-slate-800">
+                      <div className="text-2xl font-bold text-accent-foreground">
                         {product.price}
                       </div>
                       <div className="flex flex-col gap-2">
@@ -189,7 +189,7 @@ const StorePage = () => {
                           </div>
                         ))}
                       </div>
-                      <button className="mt-2 py-2 px-4 rounded-lg border border-blue-500 text-blue-500 hover:bg-blue-50">
+                      <button className="mt-2 py-2 px-4 rounded-lg border border-brand-orange text-brand-orange hover:bg-brand-orange-s hover:text-accent-foreground">
                         Add to Cart
                       </button>
                     </div>

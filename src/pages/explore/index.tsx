@@ -59,19 +59,19 @@ const ExplorePage = () => {
       <Head>
         <title>Explore - Algo Arena</title>
       </Head>
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-dark-layer-2">
         <Topbar />
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-3xl font-bold text-slate-800 mb-6">Explore</h1>
+        <div className="max-w-6xl mx-auto mt-6">
+          <h1 className="text-3xl font-bold text-accent-foreground mb-6">Explore</h1>
 
           {/* Featured Section */}
           <div className="mb-8">
-            <h2 className="text-xl font-semibold text-slate-700 mb-4">
+            <h2 className="text-xl font-semibold text-accent-foreground mb-4">
               Study Plans
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {categories.map((category, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+                <Card key={index} className="hover:shadow-lg transition-shadow bg-dark-layer-1">
                   <CardHeader>
                     <div className="flex items-center justify-between">
                       {category.icon}
@@ -91,7 +91,7 @@ const ExplorePage = () => {
                     <CardDescription>{category.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="flex justify-between text-sm text-slate-600">
+                    <div className="flex justify-between text-sm text-brand-orange-s">
                       <span>{category.problems} problems</span>
                       <span>{category.participants} users</span>
                     </div>
@@ -103,12 +103,12 @@ const ExplorePage = () => {
 
           {/* Challenges Section */}
           <div>
-            <h2 className="text-xl font-semibold text-slate-700 mb-4">
+            <h2 className="text-xl font-semibold text-accent-foreground mb-4">
               Featured Challenges
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {challenges.map((challenge, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+                <Card key={index} className="hover:shadow-lg transition-shadow bg-dark-layer-1">
                   <CardHeader>
                     <div className="flex items-center justify-between">
                       {challenge.icon}
