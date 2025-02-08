@@ -36,7 +36,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ setLoadingProblems }) => 
 
 	return (
 		<>
-			<tbody className='text-white'>
+			<tbody className='text-accent-foreground w-full'>
 				{problems.map((problem, idx) => {
 					const difficulyColor =
 						problem.difficulty === "Easy"
@@ -53,7 +53,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ setLoadingProblems }) => 
 								{problem.link ? (
 									<Link
 										href={problem.link}
-										className='hover:text-blue-600 cursor-pointer'
+										className='hover:text-brand-orange-s cursor-pointer'
 										target='_blank'
 									>
 										{problem.title}
